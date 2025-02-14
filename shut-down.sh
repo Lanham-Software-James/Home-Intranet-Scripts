@@ -9,6 +9,9 @@ docker compose down
 cd /opt/stacks/jenkins
 docker compose down
 
+cd /opt/stacks/trove
+docker compose down
+
 #Other services here
 
 cd /opt/stacks/nginx

@@ -1,6 +1,7 @@
 pipeline {
     agent any
     environment {
+        USER = 'jenkins'
         SERVER_IP = 'home-intranet'
         DEPLOY_DIR = '/opt/stacks/scripts'
         CREDENTIALS_ID = 'home-intranet-server-ssh'
@@ -17,7 +18,7 @@ pipeline {
             steps {
                 sshagent(credentials: [CREDENTIALS_ID]) {
                     // Copy scripts
-                    sh "scp -o StrictHostKeyChecking=no *.sh ${SERVER_IP}:${DEPLOY_DIR}/"
+                    sh "scp -v -o StrictHostKeyChecking=no *.sh ${USER}@${SERVER_IP}:${DEPLOY_DIR}/"
                 }
             }
         }

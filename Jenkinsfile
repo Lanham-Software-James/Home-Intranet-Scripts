@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        SERVER_IP = '192.168.0.39'
+        SERVER_IP = 'home-intranet'
         DEPLOY_DIR = '/opt/stacks/scripts'
         CREDENTIALS_ID = 'home-intranet-server-ssh'
     }

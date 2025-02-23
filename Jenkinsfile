@@ -18,7 +18,7 @@ pipeline {
             steps {
                 sshagent(credentials: [CREDENTIALS_ID]) {
                     // Copy scripts
-                    sh "scp -v -o StrictHostKeyChecking=no *.sh ${USER}@${SERVER_IP}:${DEPLOY_DIR}/"
+                    sh "scp -o StrictHostKeyChecking=no *.sh ${USER}@${SERVER_IP}:${DEPLOY_DIR}/"
                 }
             }
         }

@@ -9,10 +9,7 @@ docker compose up -d
 cd /opt/stacks/jenkins
 docker compose up -d
 
-cd /opt/stacks/trove
+cd /opt/stacks/stirling
 docker compose up -d
 
 #Other services here
-
-cd /opt/stacks/nginx
-docker compose up -d
